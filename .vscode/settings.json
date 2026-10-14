@@ -1,0 +1,7 @@
+{
+  // Dùng SDK ghim ở .fvmrc (symlink do `fvm use` tạo), không dùng Flutter global
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": { "**/.fvm": true },
+  "files.watcherExclude": { "**/.fvm": true },
+  "dart.lineLength": 120
+}

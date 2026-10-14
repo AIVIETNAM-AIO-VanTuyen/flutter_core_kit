@@ -1,0 +1,51 @@
+name: flutter_core_kit
+description: "Bộ khung core cho app Flutter: gọi API, xử lý lỗi, lưu trữ, phiên đăng nhập, router, Firebase."
+publish_to: 'none'
+
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Mạng
+  dio: ^5.11.1
+  connectivity_plus: ^7.3.1
+  package_info_plus: ^9.0.1
+
+  # Cấu hình môi trường (API_URL…), nạp ở Splash
+  flutter_dotenv: ^6.0.1
+
+  # Lưu trữ: shared_preferences cho dữ liệu thường, Keychain / Keystore cho token
+  shared_preferences: ^2.5.5
+  shared_preferences_android: ^2.4.23
+  flutter_secure_storage: ^10.3.4
+
+  # Điều hướng
+  go_router: ^18.0.2
+
+  # Firebase: push + analytics. Cần file cấu hình riêng của từng app (xem README)
+  firebase_core: ^4.15.0
+  firebase_messaging: ^16.7.0
+  firebase_analytics: ^12.6.0
+  flutter_local_notifications: ^20.1.0
+
+  # Đồng hồ giả được trong test (clock.now() thay DateTime.now())
+  clock: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  shared_preferences_platform_interface: ^2.4.2
+  flutter_secure_storage_platform_interface: ^2.1.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Cấu hình môi trường, chép từ .env.example
+    - .env
